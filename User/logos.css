@@ -1,0 +1,19 @@
+.branch-logos {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 25px;
+    margin: 15px 0 20px;
+    flex-wrap: wrap;
+}
+
+.branch-logos img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.branch-logos img:hover {
+    transform: scale(1.08);
+}

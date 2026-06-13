@@ -1,0 +1,371 @@
+/* Control the logo image and COMODO text alignment inside the header */
+.hdr-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin: -15px 0;
+}
+
+/* Keep the website logo scaled properly across screen sizes */
+.hdr-logo-img {
+    width: 8.125rem;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-right: -9px;
+}
+
+/* Adjust the clickable logo position inside the navigation bar */
+.hdr-logo-link {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+/* Style the COMODO brand text beside the logo */
+.hr-comodo {
+    font-size: 1.5rem !important;
+    font-weight: 700!important;
+    color: #fff!important;
+    margin-bottom: -0.5rem!important;
+}
+
+/* Keep the header fixed at the top during scrolling */
+.hdr-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+/* Add the dark transparent background layer behind header content */
+.hdr-bg {
+    height: 5rem;
+    background: #021532;
+    opacity: 0.5;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Align all header content horizontally */
+.hdr-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    padding-top: 2.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Prevent underline from appearing when hovering the logo */
+.hdr-logo-link:hover {
+    text-decoration: none;
+}
+
+/* Position the desktop navigation links in the center */
+.hdr-links {
+    flex: 1;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: -8px;
+}
+
+/* Style all navigation links in the desktop header */
+.hdr-links a {
+    color: #fffffffb;
+    text-decoration: none;
+    font-family: "Ysabeau", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Highlight navigation links on hover */
+.hdr-links a:hover {
+    color: white;
+}
+
+/* Style the BOOK NOW button displayed in the header */
+.hdr-book-btn {
+    background: #021532!important;
+    color: white!important;
+    border: none!important;
+    padding: 0.6rem 1.1rem!important;
+    font-size: .8rem!important;
+    cursor: pointer!important;
+    text-transform: none!important;
+    letter-spacing: normal!important;
+    transform: none!important;
+    box-shadow: none!important;
+    margin-top: -0.4rem!important;
+}
+
+/* Invert the BOOK NOW button colors on hover */
+.hdr-book-btn:hover {
+    background: #ffffff;
+    color: #021532;
+}
+
+/* Keep the dropdown menu positioned relative to the Branches link */
+.hdr-dropdown {
+    position: relative;
+    
+}
+
+/* Display the dropdown menu below the Branches navigation item */
+.hdr-dropdown-menu {
+    position: absolute;
+    z-index: 999;
+    background: #ffffff8f;
+    min-width: 8rem;
+    display: none;
+    top: 100%;
+    border-radius: 10px;
+}
+
+/* Prevent hover flickering between the Branches link and dropdown */
+.hdr-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Show the dropdown menu when hovering the Branches section */
+.hdr-dropdown:hover .hdr-dropdown-menu {
+    color: #00071d;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style each dropdown menu item */
+.hdr-dropdown-menu a {
+    color: #00071d;
+    padding: 0.8rem 2rem;
+    margin: 3;
+    text-decoration: none;
+    font-size: 0.7rem;
+    height: 2.8rem;
+    
+}
+
+/* Highlight dropdown items when hovered */
+.hdr-dropdown-menu a:hover {
+    background: #021532e1;
+    color: #ffffff;
+    border-radius: 10px;
+
+}
+
+/* Allow the header to slide upward when scrolling down */
+.hdr-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.4s ease;
+    z-index: 1000;
+}
+
+/* Hide the navigation bar during downward scrolling */
+.hdr-nav.hide {
+    transform: translateY(-100%);
+}
+
+/* Apply mobile tap and touch improvements */
+    button, a {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    /* Adjust navbar spacing for devices with safe areas */
+    .hdr-nav {
+        padding-top: env(safe-area-inset-top);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .hdr-nav.hide {
+        transform: translateY(calc(-100% - env(safe-area-inset-top)));
+    }
+
+    /* Keep the mobile menu scrollable on smaller devices */
+    #mobile-menu {
+        max-height: calc(100vh - 5rem - env(safe-area-inset-top));
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent iOS from zooming inputs */
+    input,
+    select {
+        font-size: 16px !important;
+    }
+
+    /* Keep the hamburger button touch-friendly */
+    #hamburger-btn {
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+    /* Add tap feedback inside the mobile menu */
+    #mobile-menu a:active,
+    #mobile-menu button:active {
+        background: rgba(255, 255, 255, 0.12) !important;
+    }
+
+
+    /* Mobile header adjustments */
+    @media (max-width: 767px) {
+
+        .hdr-book-btn {
+            font-size: 0.72rem !important;
+            padding: 0.5rem 0.9rem !important;
+            white-space: nowrap;
+            margin-top: 0 !important;
+            margin-left: auto !important;
+        }
+
+        /* Hide desktop navigation links on phones */
+        .hdr-links {
+            display: none !important;
+        }
+
+        /* Re-align header content for mobile layout */
+        .hdr-content {
+            padding: 0 14px !important;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Hide the COMODO text and keep only the logo image */
+        .hr-comodo {
+            display: none !important;
+        }
+
+        .hdr-logo {
+            margin: 0 !important;
+            gap: 0 !important;
+        }
+
+        .hdr-logo-link {
+            margin-left: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        /* Resize the logo image for mobile */
+        .hdr-logo-img {
+            width: 6rem !important;
+            margin-right: 0 !important;
+        }
+
+        /* Keep the BOOK NOW button compact */
+        .hdr-book-btn {
+            font-size: 0.72rem !important;
+            padding: 0.5rem 0.9rem !important;
+            white-space: nowrap;
+            margin-top: 0 !important;
+        }
+
+        /* Style the hamburger menu button */
+        #hamburger-btn {
+            background: transparent !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 8px !important;
+            margin-left: 10px !important;
+            margin-right: 0 !important;
+            border: none !important;
+            border-radius: 4px !important;
+            width: 30px !important;
+            height: 30px !important;
+            min-width: 20px !important;
+            min-height: 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            flex-shrink: 0 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            font-size: inherit !important;
+        }
+
+        /* Create the hamburger menu lines */
+        #hbr-line1,
+        #hbr-line2,
+        #hbr-line3 {
+            display: block !important;
+            width: 1.5rem !important;
+            height: 2px !important;
+            background-color: white !important;
+            background: white !important;
+        }
+    }
+
+
+    /* Adjust layout for very small phones */
+    @media (max-width: 360px) {
+
+        .hdr-logo-img {
+            width: 4.8rem !important;
+        }
+
+        .hdr-book-btn {
+            font-size: 0.65rem !important;
+            padding: 0.4rem 0.65rem !important;
+        }
+
+        /* Keep the hamburger button aligned on tiny screens */
+        #hamburger-btn {
+            background: transparent !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 8px !important;
+            margin-left: 10px !important;
+            margin-right: 0 !important;
+            border: none !important;
+            border-radius: 4px !important;
+            width: 30px !important;
+            height: 30px !important;
+            min-width: 20px !important;
+            min-height: 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 5px !important;
+            cursor: pointer !important;
+            flex-shrink: 0 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            font-size: inherit !important;
+        }
+
+        /* Preserve the hamburger line visibility */
+        #hbr-line1,
+        #hbr-line2,
+        #hbr-line3 {
+            display: block !important;
+            width: 1.5rem !important;
+            height: 2px !important;
+            background-color: white !important;
+            background: white !important;
+        }
+    }

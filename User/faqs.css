@@ -1,0 +1,323 @@
+/* FAQS */
+.faqs-intro {
+    background: white;
+    padding: clamp(2rem, 8vh, 6rem) clamp(1.5rem, 6vw, 5rem) clamp(2rem, 6vh, 5rem);
+}
+
+.faqs-intro-inner {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faqs-intro-inner h2 {
+    color: #0f0046;
+    font-size: clamp(1.4rem, 3.5vh, 2.6rem);
+    margin-bottom: clamp(0.8rem, 2vh, 1.5rem);
+}
+
+.faqs-intro-inner p {
+    color: #000000;
+    font-size: clamp(0.85rem, 2vh, 1.3rem);
+    line-height: 1.8;
+    margin-bottom: clamp(1.5rem, 4vh, 3.5rem);
+}
+
+/* FAQ SECTION */
+/* Wraps all the categories below the intro */
+.faqs-section {
+    background: #ffffff;
+    margin-top: clamp(-2rem, -4vh, -1rem);
+    padding: clamp(2rem, 4vh, 4rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 7vh, 6rem);
+}
+
+/* Centers and stacks the category cards vertically */
+.faqs-container {
+    max-width: 72rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vh, 3.5rem);
+}
+
+/* FAQ CATEGORY */
+/* Each grouped card holding a header and its questions */
+.faq-category {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.15rem 0.6rem rgba(0, 0, 0, 0.06);
+}
+
+/* Dark banner at the top of every category card */
+.faq-category-header {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.6rem, 1.2vw, 1rem);
+    background: #00071d;
+    color: white;
+    padding: clamp(0.8rem, 1.5vh, 1.3rem) clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.faq-category-header i {
+    font-size: clamp(1.1rem, 2.5vh, 1.8rem);
+}
+
+.faq-category-header h3 {
+    font-size: clamp(1rem, 2.8vh, 2rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* FAQ ITEM */
+/* Individual row separating each question */
+.faq-item {
+    border-bottom: 0.06rem solid #e4e4e4;
+}
+
+/* Clickable question row that triggers the accordion */
+.faq-question {
+    width: 100%;
+    min-height: clamp(3.5rem, 8vh, 6rem);
+    background: white;
+    text-align: left;
+    font-size: clamp(0.85rem, 2vh, 1.4rem);
+    font-weight: 600;
+    color: #00071d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(0.8rem, 1.5vw, 1.5rem);
+    padding: clamp(0.8rem, 2vh, 1.5rem) clamp(1.5rem, 6vw, 5rem);
+    margin: 0;
+    border-bottom: 0.06rem solid #e4e4e4;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Darkens the row on hover to signal interactivity */
+.faq-question:hover {
+    background: #00071dc0;
+    color: #ffffff;
+    margin-bottom: -0.1rem;
+    box-shadow: none;
+}
+
+.faq-question:hover .faq-icon {
+    color: #ffffff;
+}
+
+/* Chevron that rotates when the answer opens */
+.faq-icon {
+    font-size: clamp(0.75rem, 1.6vh, 1.2rem);
+    color: #00071d;
+    flex-shrink: 0;
+}
+
+/* FAQ ANSWER */
+/* Collapsed by default; max-height is set by JS on toggle */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer-content {
+    margin: clamp(1.2rem, 3.5vh, 3rem) clamp(1.5rem, 4vw, 3.5rem);
+    padding: 0 clamp(1rem, 5vw, 4rem);
+}
+
+.faq-answer p {
+    font-size: clamp(0.82rem, 1.9vh, 1.2rem);
+    color: #333;
+    line-height: clamp(1.5rem, 3.2vh, 2.2rem);
+}
+
+.faq-answer ul {
+    font-size: clamp(0.78rem, 1.6vh, 1.05rem);
+    color: #444;
+    line-height: clamp(1.5rem, 3.2vh, 2.2rem);
+    list-style: disc;
+}
+
+.faq-answer ul li {
+    margin-left: clamp(1.2rem, 3.5vh, 3rem);
+    margin-bottom: clamp(0.2rem, 0.5vh, 0.4rem);
+}
+
+.faq-answer strong {
+    color: #0f0046;
+}
+
+.faq-answer a {
+    color: #0f0046;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* PAYMENT GRID */
+/* Two-column layout for walk-in vs online payment options */
+.payment-grid {
+    display: flex;
+    gap: clamp(0.8rem, 2vh, 1.8rem);
+    padding: 0 clamp(0.8rem, 2vw, 2rem) clamp(0.8rem, 2vh, 1.8rem);
+    flex-wrap: wrap;
+}
+
+/* Individual payment column card */
+.payment-col {
+    flex: 1 1 12rem;
+    background: #f5f5fc;
+    border-radius: 0.65rem;
+    padding: clamp(1rem, 2.5vh, 2rem) clamp(1.2rem, 3vw, 3rem);
+}
+
+.payment-col li {
+    color: #0f0046;
+    font-size: clamp(0.78rem, 1.6vh, 1.05rem);
+    line-height: 1.7;
+    flex-shrink: 0;
+}
+
+/* Bold label at the top of each payment column */
+.payment-label {
+    font-size: clamp(0.85rem, 1.8vh, 1.2rem) !important;
+    font-weight: bold !important;
+    color: #0f0046 !important;
+    margin-bottom: clamp(0.4rem, 1vh, 0.75rem) !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.4rem, 0.8vw, 0.7rem);
+}
+
+.payment-col ul {
+    padding: 0 0 0 clamp(0.8rem, 1.5vw, 1.2rem) !important;
+    margin: 0;
+}
+
+/* BRANCH INFO */
+/* Two-column layout showing parking details per branch */
+.branch-info {
+    display: flex;
+    gap: clamp(0.8rem, 2vh, 1.8rem);
+    padding: 0 clamp(0.8rem, 2vw, 2rem) clamp(0.8rem, 2vh, 1.8rem);
+    flex-wrap: wrap;
+}
+
+/* Individual branch card inside the parking answer */
+.branch-item {
+    flex: 1 1 12rem;
+    background: #f5f5fc;
+    border-radius: 0.65rem;
+    padding: clamp(1rem, 2.5vh, 2rem) clamp(1.2rem, 3vw, 3rem);
+}
+
+.branch-name {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.4rem, 0.8vw, 0.7rem);
+    font-size: clamp(0.85rem, 1.8vh, 1.2rem);
+    font-weight: 700;
+    color: #0f0046;
+    margin-bottom: clamp(0.3rem, 0.7vh, 0.55rem);
+}
+
+.branch-item p {
+    font-size: clamp(0.82rem, 1.8vh, 1.1rem) !important;
+    color: #444 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.6 !important;
+}
+
+/* CTA SECTION */
+/* Gray strip at the bottom nudging guests to reach out */
+.faqs-cta {
+    background: #e9e9e9;
+    text-align: center;
+    padding-top: clamp(0.1rem, 2.5vh, 2.1rem);
+    min-height: clamp(10rem, 25vh, 20rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faqs-cta-inner {
+    max-width: 42rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.faqs-cta > .faqs-cta-inner > i {
+    font-size: clamp(1.8rem, 4vh, 3rem);
+    color: #00071daf;
+    margin-bottom: 0;
+    display: block;
+}
+
+.faqs-cta h2 {
+    color: #00071d;
+    font-size: clamp(1.2rem, 2.8vh, 2.1rem);
+    margin-bottom: clamp(0.5rem, 1.2vh, 1rem);
+}
+
+.faqs-cta p {
+    color: #00071d;
+    font-size: clamp(0.8rem, 1.7vh, 1.1rem);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+/* Tighten padding on tablet-sized screens */
+@media (max-width: 60rem) {
+    .faqs-intro {
+        padding: clamp(2rem, 5vh, 4rem) clamp(1.2rem, 4vw, 3rem) clamp(1.5rem, 4vh, 3rem);
+    }
+
+    .faqs-section {
+        padding: clamp(1.5rem, 3vh, 3rem) clamp(1rem, 3vw, 2.5rem) clamp(2rem, 5vh, 4rem);
+    }
+
+    .faq-question {
+        padding: clamp(0.8rem, 1.8vh, 1.3rem) clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .faq-answer-content {
+        padding: 0 clamp(0.5rem, 2vw, 1.5rem);
+    }
+}
+
+/* MOBILE */
+/* Stack payment and branch columns on small screens */
+@media (max-width: 38rem) {
+    .payment-grid,
+    .branch-info {
+        flex-direction: column;
+    }
+
+    .payment-col,
+    .branch-item {
+        flex: 1 1 100%;
+    }
+
+    .faq-question {
+        padding: clamp(0.7rem, 1.5vh, 1rem) clamp(0.8rem, 2vw, 1.2rem);
+        font-size: clamp(0.82rem, 1.8vh, 1rem);
+    }
+
+    .faq-answer-content {
+        margin: clamp(0.8rem, 2vh, 1.5rem) clamp(0.8rem, 2vw, 1.2rem);
+        padding: 0;
+    }
+
+    .faqs-cta {
+        padding-top: clamp(1.5rem, 3vh, 2.5rem);
+    }
+}

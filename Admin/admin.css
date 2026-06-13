@@ -1,0 +1,1105 @@
+/* PAGE RESET */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #111827;
+}
+
+/* ADMIN SHELL */
+.admin-shell {
+    display: flex;
+    min-height: 100vh;
+    background: #111827;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 180px;
+    background: #0d1017;
+    padding: 16px 0;
+    flex-shrink: 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Logo text */
+.sidebar .logo {
+    color: #c9a84c;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 16px 20px;
+    border-bottom: 0.5px solid #222;
+    margin-bottom: 10px;
+}
+
+/* Sidebar section title */
+.sidebar .section {
+    color: #444;
+    font-size: 10px;
+    padding: 10px 16px 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Sidebar hover */
+.sidebar a:hover { 
+    color: white; 
+    background: #1a2035; 
+}
+
+/* Active sidebar link */
+.sidebar a.active { 
+    color: white; 
+    background: #1a4fa0; 
+}
+
+/* MAIN CONTENT */
+.admin-content {
+    margin-left: 180px;
+    padding: 24px;
+    flex: 1;
+}
+
+/* TOPBAR */
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Page title */
+.admin-topbar h2 { 
+    color: white; 
+    font-size: 20px; 
+}
+
+/* Date text */
+.admin-date { 
+    color: #555; 
+    font-size: 12px; 
+}
+
+/* STAT CARDS */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Single stat card */
+.stat-card {
+    background: #1a2035;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* Small stat label */
+.stat-label { 
+    color: #888; 
+    font-size: 11px; 
+    margin-bottom: 6px; 
+}
+
+/* Big stat number */
+.stat-value { 
+    color: white; 
+    font-size: 26px; 
+    font-weight: 500; 
+}
+
+/* Gold stat */
+.stat-value.gold { 
+    color: #c9a84c; 
+}
+
+/* Green stat */
+.stat-value.green { 
+    color: #4ade80; 
+}
+
+/* SECTION HEADER */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* Section title */
+.section-header h3 { 
+    color: white; 
+    font-size: 14px; 
+    margin: 0; 
+    flex: 1; 
+}
+
+/* BRANCH TOGGLE BUTTONS */
+.branch-toggles { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.branch-btn {
+    background: #1a2035;
+    color: #888;
+    border: 0.5px solid #333;
+    padding: 5px 14px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: monospace;
+    transition: all 0.2s;
+}
+
+/* Branch hover */
+.branch-btn:hover { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+}
+
+/* Active branch */
+.branch-btn.active-btn { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+}
+
+/* TABLE */
+.table-wrap { 
+    background: #1a2035; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+/* Table style */
+.table-wrap table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    font-size: 12px; 
+}
+
+/* Table headers */
+.table-wrap th { 
+    background: #0d1017; 
+    color: #888; 
+    padding: 10px 14px; 
+    text-align: left; 
+    font-weight: 500; 
+}
+
+/* Table cells */
+.table-wrap td { 
+    color: #ccc; 
+    padding: 10px 14px; 
+    border-top: 0.5px solid #222; 
+    vertical-align: middle; 
+}
+
+/* STATUS PILLS */
+.pill { 
+    display: inline-block; 
+    font-size: 11px; 
+    padding: 3px 10px; 
+    border-radius: 10px; 
+    font-weight: 500; 
+}
+
+/* Pending status */
+.pill.pending  { 
+    background: #2d2000; 
+    color: #c9a84c; 
+}
+
+/* Active status */
+.pill.active   { 
+    background: #0d2d1a; 
+    color: #4ade80; 
+}
+
+/* Done status */
+.pill.done     { 
+    background: #1a1a2d; 
+    color: #818cf8; 
+}
+
+/* Cancelled status */
+.pill.cancelled { 
+    background: #2d0d0d; 
+    color: #f87171; 
+}
+
+/* ACTION BUTTONS */
+.actions { 
+    display: flex; 
+    gap: 4px; 
+    flex-wrap: wrap; 
+}
+
+/* Small buttons */
+.btn-xs { 
+    font-size: 11px; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: 500; 
+    margin: 0; 
+}
+
+/* Accept button */
+.btn-xs.accept { 
+    background: #4ade80; 
+    color: #111; 
+}
+
+/* Edit button */
+.btn-xs.edit { 
+    background: #378ADD; 
+    color: white; 
+}
+
+/* Delete button */
+.btn-xs.del { 
+    background: #E24B4A; 
+    color: white; 
+}
+
+/* View button */
+.btn-xs.view { 
+    background: #444; 
+    color: white; 
+}
+
+/* LOGIN PAGE */
+.login-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login container */
+.login-box {
+    background: #1a2035;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    border: 0.5px solid #333;
+}
+
+/* Login title */
+.login-box h2 { 
+    color: #c9a84c; 
+    margin-bottom: 4px; 
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+    background: #2d0d0d;
+    color: #f87171;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* SUCCESS MESSAGE */
+.success-msg {
+    background: #0d2d1a;
+    color: #4ade80;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* TABS */
+.tab-row { 
+    display: flex; 
+    gap: 8px; 
+    margin-bottom: 14px; 
+}
+
+.tab {
+    background: #1a2035;
+    color: #888;
+    border: 0.5px solid #333;
+    padding: 5px 14px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: monospace;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Tab hover + active */
+.tab:hover, 
+.tab.active { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+    text-decoration: none; 
+}
+
+/* FORM CARD */
+.form-card {
+    background: #1a2035;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 800px;
+}
+
+/* Form grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* Form field wrapper */
+.form-field { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+
+/* Label text */
+.form-field label { 
+    color: #888; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+
+/* Inputs */
+.form-field input,
+.form-field select,
+.form-field textarea {
+    background: #111827;
+    border: 0.5px solid #333;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    padding: 8px 10px;
+    font-family: monospace;
+
+    /* Prevent width overflow */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea style */
+.form-field textarea { 
+    height: 60px; 
+    resize: none; 
+}
+
+/* ROOM GRID */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* Room card */
+.room-card-admin {
+    background: #1a2035;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Room image */
+.room-img img { 
+    width: 100%; 
+    height: 140px; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Room info */
+.room-info { 
+    padding: 12px; 
+}
+
+/* Room name */
+.room-name { 
+    color: white; 
+    font-size: 13px; 
+    font-weight: 500; 
+    margin-bottom: 4px; 
+}
+
+/* Room details */
+.room-sub { 
+    color: #888; 
+    font-size: 11px; 
+    margin-bottom: 2px; 
+}
+
+/* Room buttons */
+.room-btns { 
+    display: flex; 
+    gap: 6px; 
+    margin-top: 10px; 
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* Single gallery item */
+.gallery-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 100px;
+}
+
+/* Gallery image */
+.gallery-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Delete image button */
+.del-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #E24B4A;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Upload area */
+.upload-box {
+    background: #1a2035;
+    border: 1px dashed #333;
+    border-radius: 6px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* SETTINGS */
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Settings card */
+.settings-card {
+    background: #1a2035;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Floating home button */
+.floating-home {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    z-index: 9999;
+}
+
+/* Floating image */
+.floating-home img {
+    width: 100px;
+    transition: 0.2s;
+}
+
+/* Floating image hover */
+.floating-home img:hover {
+    transform: scale(1.08);
+}/* PAGE RESET */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #111827;
+}
+
+/* ADMIN SHELL */
+.admin-shell {
+    display: flex;
+    min-height: 100vh;
+    background: #111827;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 180px;
+    background: #0d1017;
+    padding: 16px 0;
+    flex-shrink: 0;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Logo text */
+.sidebar .logo {
+    color: #c9a84c;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 16px 20px;
+    border-bottom: 0.5px solid #222;
+    margin-bottom: 10px;
+}
+
+/* Sidebar section title */
+.sidebar .section {
+    color: #444;
+    font-size: 10px;
+    padding: 10px 16px 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Sidebar hover */
+.sidebar a:hover { 
+    color: white; 
+    background: #1a2035; 
+}
+
+/* Active sidebar link */
+.sidebar a.active { 
+    color: white; 
+    background: #1a4fa0; 
+}
+
+/* MAIN CONTENT */
+.admin-content {
+    margin-left: 180px;
+    padding: 24px;
+    flex: 1;
+}
+
+/* TOPBAR */
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Page title */
+.admin-topbar h2 { 
+    color: white; 
+    font-size: 20px; 
+}
+
+/* Date text */
+.admin-date { 
+    color: #555; 
+    font-size: 12px; 
+}
+
+/* STAT CARDS */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Single stat card */
+.stat-card {
+    background: #1a2035;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* Small stat label */
+.stat-label { 
+    color: #888; 
+    font-size: 11px; 
+    margin-bottom: 6px; 
+}
+
+/* Big stat number */
+.stat-value { 
+    color: white; 
+    font-size: 26px; 
+    font-weight: 500; 
+}
+
+/* Gold stat */
+.stat-value.gold { 
+    color: #c9a84c; 
+}
+
+/* Green stat */
+.stat-value.green { 
+    color: #4ade80; 
+}
+
+/* SECTION HEADER */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* Section title */
+.section-header h3 { 
+    color: white; 
+    font-size: 14px; 
+    margin: 0; 
+    flex: 1; 
+}
+
+/* BRANCH TOGGLE BUTTONS */
+.branch-toggles { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.branch-btn {
+    background: #1a2035;
+    color: #888;
+    border: 0.5px solid #333;
+    padding: 5px 14px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: monospace;
+    transition: all 0.2s;
+}
+
+/* Branch hover */
+.branch-btn:hover { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+}
+
+/* Active branch */
+.branch-btn.active-btn { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+}
+
+/* TABLE */
+.table-wrap { 
+    background: #1a2035; 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+/* Table style */
+.table-wrap table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    font-size: 12px; 
+}
+
+/* Table headers */
+.table-wrap th { 
+    background: #0d1017; 
+    color: #888; 
+    padding: 10px 14px; 
+    text-align: left; 
+    font-weight: 500; 
+}
+
+/* Table cells */
+.table-wrap td { 
+    color: #ccc; 
+    padding: 10px 14px; 
+    border-top: 0.5px solid #222; 
+    vertical-align: middle; 
+}
+
+/* STATUS PILLS */
+.pill { 
+    display: inline-block; 
+    font-size: 11px; 
+    padding: 3px 10px; 
+    border-radius: 10px; 
+    font-weight: 500; 
+}
+
+/* Pending status */
+.pill.pending  { 
+    background: #2d2000; 
+    color: #c9a84c; 
+}
+
+/* Active status */
+.pill.active   { 
+    background: #0d2d1a; 
+    color: #4ade80; 
+}
+
+/* Done status */
+.pill.done     { 
+    background: #1a1a2d; 
+    color: #818cf8; 
+}
+
+/* Cancelled status */
+.pill.cancelled { 
+    background: #2d0d0d; 
+    color: #f87171; 
+}
+
+/* ACTION BUTTONS */
+.actions { 
+    display: flex; 
+    gap: 4px; 
+    flex-wrap: wrap; 
+}
+
+/* Small buttons */
+.btn-xs { 
+    font-size: 11px; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: 500; 
+    margin: 0; 
+}
+
+/* Accept button */
+.btn-xs.accept { 
+    background: #4ade80; 
+    color: #111; 
+}
+
+/* Edit button */
+.btn-xs.edit { 
+    background: #378ADD; 
+    color: white; 
+}
+
+/* Delete button */
+.btn-xs.del { 
+    background: #E24B4A; 
+    color: white; 
+}
+
+/* View button */
+.btn-xs.view { 
+    background: #444; 
+    color: white; 
+}
+
+/* LOGIN PAGE */
+.login-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login container */
+.login-box {
+    background: #1a2035;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    border: 0.5px solid #333;
+}
+
+/* Login title */
+.login-box h2 { 
+    color: #c9a84c; 
+    margin-bottom: 4px; 
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+    background: #2d0d0d;
+    color: #f87171;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* SUCCESS MESSAGE */
+.success-msg {
+    background: #0d2d1a;
+    color: #4ade80;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* TABS */
+.tab-row { 
+    display: flex; 
+    gap: 8px; 
+    margin-bottom: 14px; 
+}
+
+.tab {
+    background: #1a2035;
+    color: #888;
+    border: 0.5px solid #333;
+    padding: 5px 14px;
+    font-size: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: monospace;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* Tab hover + active */
+.tab:hover, 
+.tab.active { 
+    background: #1a4fa0; 
+    color: white; 
+    border-color: #1a4fa0; 
+    text-decoration: none; 
+}
+
+/* FORM CARD */
+.form-card {
+    background: #1a2035;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 800px;
+}
+
+/* Form grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* Form field wrapper */
+.form-field { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+}
+
+/* Label text */
+.form-field label { 
+    color: #888; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+
+/* Inputs */
+.form-field input,
+.form-field select,
+.form-field textarea {
+    background: #111827;
+    border: 0.5px solid #333;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    padding: 8px 10px;
+    font-family: monospace;
+
+    /* Prevent width overflow */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea style */
+.form-field textarea { 
+    height: 60px; 
+    resize: none; 
+}
+
+/* ROOM GRID */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* Room card */
+.room-card-admin {
+    background: #1a2035;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Room image */
+.room-img img { 
+    width: 100%; 
+    height: 140px; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Room info */
+.room-info { 
+    padding: 12px; 
+}
+
+/* Room name */
+.room-name { 
+    color: white; 
+    font-size: 13px; 
+    font-weight: 500; 
+    margin-bottom: 4px; 
+}
+
+/* Room details */
+.room-sub { 
+    color: #888; 
+    font-size: 11px; 
+    margin-bottom: 2px; 
+}
+
+/* Room buttons */
+.room-btns { 
+    display: flex; 
+    gap: 6px; 
+    margin-top: 10px; 
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* Single gallery item */
+.gallery-item {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 100px;
+}
+
+/* Gallery image */
+.gallery-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Delete image button */
+.del-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #E24B4A;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Upload area */
+.upload-box {
+    background: #1a2035;
+    border: 1px dashed #333;
+    border-radius: 6px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* SETTINGS */
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Settings card */
+.settings-card {
+    background: #1a2035;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Floating home button */
+.floating-home {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    z-index: 9999;
+}
+
+/* Floating image */
+.floating-home img {
+    width: 100px;
+    transition: 0.2s;
+}
+
+/* Floating image hover */
+.floating-home img:hover {
+    transform: scale(1.08);
+}
